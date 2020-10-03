@@ -2,13 +2,13 @@
 <includes>
     <include name="InfoSubWidgetWeatherOld">
         <control type="group">
-            <animation effect="slide" start="0" end="0,385" time="0" condition="Integer.IsEqual(Container(301).NumItems,1) + !String.Contains(Container(300).ListItem.Property(widgetFullscreen),yes)">Conditional</animation>
+            <animation effect="slide" start="0" end="0,385" time="0" condition="Integer.IsEqual(Container(301).NumItems,1) + !String.Contains(Container(300).ListItem.Property(widgetFullscreen),yes)">Conditional</animation>                                              
             <control type="group">
                 <top>50</top>
                 <left>-9</left>
                 <width>800</width>
                 <height>325</height>
-                <include>Animation.Vertical.Widgets.Container</include>
+                <include>Animation.Vertical.Widgets.Container</include>                            
                 <control type="image">
                     <left>0</left>
                     <top>0</top>
@@ -46,15 +46,15 @@
                     <aspectratio>scale</aspectratio>
                     <animation effect="fade" start="100" end="10" condition="true">Conditional</animation>
                     <texture background="true">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(weather).Property(Current.FanartCode)].jpg</texture>
-                </control>
+                </control>                            
                 <control type="image">
                     <left>9</left>
                     <top>9</top>
                     <right>9</right>
-                    <bottom>9</bottom>
-                    <texture colordiffuse="BoxWidget" border="4" background="true">common/box21.png</texture>
-                    <visible>!Skin.HasSetting(thumbnails.white)</visible>
-                </control>
+                    <bottom>9</bottom>                        
+                    <texture colordiffuse="BoxWidget" border="4" background="true">common/box21.png</texture>   
+                    <visible>!Skin.HasSetting(thumbnails.white)</visible>                        
+                </control> 
                 <control type="image">
                     <top>40</top>
                     <left>480</left>
@@ -84,35 +84,35 @@
                     <texture>$INFO[Window(Weather).Property(Day0.OutlookIcon)]</texture>
                     <visible>String.IsEmpty(Skin.String(weather.icons.path))</visible>
                 </control>
-            </control>
-            <control type="grouplist">
+            </control>                        
+            <control type="grouplist">                            
                 <left>3</left>
                 <width>522</width>
                 <orientation>vertical</orientation>
                 <top>0</top>
                 <usecontrolcoords>true</usecontrolcoords>
                 <itemgap>15</itemgap>
-                <include>Animation.Vertical.Widgets.Label</include>
+                <include>Animation.Vertical.Widgets.Label</include>                            
                 <control type="grouplist" id="9020">
                     <height>40</height>
                     <left>0</left>
                     <orientation>horizontal</orientation>
-                    <itemgap>10</itemgap>
-                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>10</itemgap>  
+                    <usecontrolcoords>true</usecontrolcoords>                              
                     <include content="Kodi_Logo_Home">
-                        <param name="dimensions" value="30"/>
-                        <param name="top" value="5"/>
-                        <param name="left" value="0"/>
-                        <param name="left-gradient" value="-40"/>
+                        <param name="dimensions" value="30" />
+                        <param name="top" value="5" />
+                        <param name="left" value="0" />
+                        <param name="left-gradient" value="-40" />
                     </include>
-                    <control type="label" id="90244">
+                    <control type="label" id="90244">                            
                         <height>38</height>
                         <font>SmallNavi</font>
-                        <width>1322</width>
+                        <width>1322</width>                                                               
                         <textcolor>Dark1</textcolor>
-                        <label>$LOCALIZE[8] - $LOCALIZE[19030]</label>
+                        <label>$LOCALIZE[8] - $LOCALIZE[19030]</label>                         
                     </control>
-                </control>
+                </control> 
                 <control type="label">
                     <font>SmallBold</font>
                     <width>100%</width>
@@ -134,6 +134,7 @@
                     <font>Tiny</font>
                     <width>400</width>
                     <height min="36" max="180">auto</height>
+
                     <align>left</align>
                     <left>35</left>
                     <textcolor>PanelWhite100</textcolor>
@@ -142,13 +143,13 @@
                     <label>$INFO[Window(Weather).Property(Current.Condition),,[CR]]$INFO[Window(Weather).Property(Current.FeelsLike),$LOCALIZE[402] ,°[CR]]$INFO[Window(Weather).Property(Current.Humidity),, $LOCALIZE[406][CR]]$INFO[Window(Weather).Property(Current.Wind),$LOCALIZE[404]: ][CR]$VAR[Weather_Sunrise] / $VAR[Weather_Sunset]</label>
                 </control>
             </control>
-        </control>
+        </control>        
     </include>
+    
     <include name="InfoSubWidgetWeatherNormal">
-        <control type="group">
-            <animation effect="slide" start="0" end="0,385" time="0" condition="Integer.IsEqual(Container(301).NumItems,1) + !String.Contains(Container(300).ListItem.Property(widgetFullscreen),yes)">Conditional</animation>
-            <include>Animation.Vertical.Widgets.Label</include>
-            <width>1800</width>
+        <control type="group">             
+            <animation effect="slide" start="0" end="0,385" time="0" condition="Integer.IsEqual(Container(301).NumItems,1) + !String.Contains(Container(300).ListItem.Property(widgetFullscreen),yes)">Conditional</animation>            <include>Animation.Vertical.Widgets.Label</include>                                  
+            <width>1800</width>  
             <height>400</height>
             <control type="label">
                 <top>2</top>
@@ -158,7 +159,7 @@
                 <left>2</left>
                 <textcolor>Dark1</textcolor>
                 <label fallback="$LOCALIZE[37875]">$INFO[Weather.location]</label>
-            </control>
+            </control>            
             <control type="textbox">
                 <height>82</height>
                 <bottom>30</bottom>
@@ -168,11 +169,11 @@
                 <font>Tiny</font>
                 <textcolor>Dark3</textcolor>
                 <label>$INFO[System.AddonTitle(Weather.plugin)][CR]$INFO[Window(Weather).Property(Updated),$LOCALIZE[12014]: ,]</label>
-            </control>
+            </control>                          
             <control type="grouplist">
-                <top>76</top>
-                <left>3</left>
-                <orientation>horizontal</orientation>
+                <top>76</top>   
+                <left>3</left>                             
+                <orientation>horizontal</orientation>                   
                 <control type="grouplist">
                     <itemgap>0</itemgap>
                     <width>350</width>
@@ -228,8 +229,8 @@
                         <font>Tiny</font>
                         <textcolor>Dark2</textcolor>
                         <label>$INFO[Window(Weather).Property(Current.Humidity),, [LOWERCASE]$LOCALIZE[406][/LOWERCASE]]</label>
-                    </control>
-                </control>
+                    </control>                    
+                </control>                
                 <control type="grouplist">
                     <itemgap>0</itemgap>
                     <width>350</width>
@@ -285,7 +286,7 @@
                         <font>Tiny</font>
                         <textcolor>Dark2</textcolor>
                         <label>$VAR[Weather_LowTemp,$LOCALIZE[391] ,]$VAR[Weather_HighTemp,  -  $LOCALIZE[393] ,]</label>
-                    </control>
+                    </control>                    
                 </control>
                 <control type="grouplist">
                     <itemgap>0</itemgap>
@@ -342,7 +343,7 @@
                         <font>Tiny</font>
                         <textcolor>Dark2</textcolor>
                         <label>$VAR[Weather_UVIndex_Info]</label>
-                    </control>
+                    </control>                    
                 </control>
                 <control type="grouplist">
                     <itemgap>0</itemgap>
@@ -375,7 +376,7 @@
                         <label>$INFO[Weather.location]</label>
                     </control>
                 </control>
-                <control type="grouplist">
+                <control type="grouplist">                            
                     <width>422</width>
                     <orientation>vertical</orientation>
                     <usecontrolcoords>true</usecontrolcoords>
@@ -409,26 +410,27 @@
                         <texture>$INFO[Window(Weather).Property(Day0.OutlookIcon)]</texture>
                         <visible>String.IsEmpty(Skin.String(weather.icons.path))</visible>
                     </control>
-                </control>
-            </control>
-        </control>
+                 </control>
+             </control>             
+        </control>        
     </include>
+    
     <include name="InfoSubWidgetSystemInclude">
-        <control type="group">
-            <animation effect="slide" start="0" end="0,387" time="0" condition="Integer.IsEqual(Container(301).NumItems,1) + !String.Contains(Container(300).ListItem.Property(widgetFullscreen),yes)">Conditional</animation>
-            <include>Animation.Vertical.Widgets.Label</include>
+        <control type="group">                        
+            <animation effect="slide" start="0" end="0,387" time="0" condition="Integer.IsEqual(Container(301).NumItems,1) + !String.Contains(Container(300).ListItem.Property(widgetFullscreen),yes)">Conditional</animation>                                     
+            <include>Animation.Vertical.Widgets.Label</include> 
             <control type="label">
                 <left>4</left>
                 <include>LabelTopInfoSubDefinition</include>
                 <label>$LOCALIZE[130]</label>
-            </control>
-            <control type="grouplist">
+            </control> 
+            <control type="grouplist">                            
                 <top>79</top>
                 <left>3</left>
                 <width>1500</width>
                 <orientation>vertical</orientation>
                 <usecontrolcoords>true</usecontrolcoords>
-                <itemgap>0</itemgap>
+                <itemgap>0</itemgap>                                              
                 <control type="label">
                     <font>Tiny</font>
                     <width>100%</width>
@@ -462,7 +464,7 @@
                     <height>36</height>
                     <align>left</align>
                     <textcolor>Dark2</textcolor>
-                    <label/>
+                    <label></label>
                 </control>
                 <control type="label">
                     <font>Tiny</font>
@@ -481,14 +483,14 @@
                     <textcolor>Dark2</textcolor>
                     <label>$INFO[System.TotalUptime,$LOCALIZE[12394]: ,]</label>
                     <visible>!String.IsEmpty(System.TotalUptime)</visible>
-                </control>
+                </control> 
                 <control type="label">
                     <font>Tiny</font>
                     <width>100%</width>
                     <height>36</height>
                     <align>left</align>
                     <textcolor>Dark2</textcolor>
-                    <label/>
+                    <label></label>
                 </control>
                 <control type="label">
                     <font>Tiny</font>
@@ -497,8 +499,8 @@
                     <align>left</align>
                     <textcolor>Dark2</textcolor>
                     <label>$LOCALIZE[37870] v$INFO[System.AddonVersion(skin.arctic.zephyr.mod)]</label>
-                </control>
+                </control>               
             </control>
-        </control>
+        </control>  
     </include>
 </includes>

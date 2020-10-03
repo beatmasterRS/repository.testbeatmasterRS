@@ -135,6 +135,7 @@
                     </control>
                 </focusedlayout>
             </control>
+        
             <control type="image">
                 <centertop>100</centertop>
                 <centerright>8</centerright>
@@ -146,5 +147,9 @@
                 <texture colordiffuse="Dark2" flipx="false">common/arrow-small-right.png</texture>
             </control>
         </control>
+
     </include>
+    
+    
+   
 </includes>

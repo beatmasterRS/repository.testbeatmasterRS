@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window id="1132" type="dialog">
-    <defaultcontrol always="true">9000</defaultcontrol>
+   	<defaultcontrol always="true">9000</defaultcontrol>
     <zorder>0</zorder>
     <onload>ClearProperty(movie.Fanart,home)</onload>
     <onload>RunScript(script.embuary.helper,action=getkodisetting,setting=myvideos.selectaction)</onload>
     <onload>Control.Move(9502,$INFO[Container(9502).CurrentItem,-])</onload>
-    <onload>Control.Move(9502,1)</onload>
+	<onload>Control.Move(9502,1)</onload>
     <onload>RunScript(script.embuary.helper,action=resetposition,container=9502)</onload>
     <controls>
         <include condition="!Skin.HasSetting(wipinfo)">MovieSetsOld</include>
-        <include condition="Skin.HasSetting(wipinfo)">MovieSetsNew</include>
+        <include condition="Skin.HasSetting(wipinfo)">MovieSetsNew</include>        
     </controls>
 </window>

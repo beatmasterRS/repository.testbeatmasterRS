@@ -2,14 +2,19 @@
 <!-- Foundation -->
 <window id="147">
     <defaultcontrol>61</defaultcontrol>
+
     <controls>
+
         <include>GlobalOverlay</include>
+
         <control type="group">
             <posx>240</posx>
             <posy>83</posy>
             <width>1500</width>
             <height>950</height>
+            
             <include>DefDialogInfoPanel</include>
+            
             <control type="label" id="1">
                 <description>header label</description>
                 <left>30</left>
@@ -19,6 +24,7 @@
                 <textcolor>Black70</textcolor>
                 <height>45</height>
             </control>
+
             <control type="textbox" id="5">
                 <description>textarea</description>
                 <left>60</left>
@@ -27,6 +33,7 @@
                 <height>780</height>
                 <align>justify</align>
             </control>
+
             <control type="scrollbar" id="61">
                 <right>30</right>
                 <posy>108</posy>
@@ -39,6 +46,9 @@
                 <texturesliderbackground colordiffuse="Black12">common/white.png</texturesliderbackground>
                 <texturesliderbar colordiffuse="$VAR[ColorHighlight]">common/white.png</texturesliderbar>
             </control>
+
         </control>
+
     </controls>
+
 </window>

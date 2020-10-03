@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window type="buttonMenu" id="111">
-    <defaultcontrol always="true">3110</defaultcontrol>
+    <defaultcontrol always="true">3110</defaultcontrol>    
     <zorder>10</zorder>
     <controls>
         <include>GlobalOverlay</include>
@@ -106,31 +106,31 @@
                 <height>695</height>
                 <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
                 <visible>Integer.IsGreater(Container(3110).NumItems,7)</visible>
-            </control>
+            </control>            
             <control type="group">
-                <left>25</left>
-                <top>10</top>
-                <control type="label">
-                    <description>Header Label</description>
-                    <left>70</left>
-                    <width>1000</width>
-                    <posy>0</posy>
-                    <include>FontTop</include>
-                    <textcolor>Dark2</textcolor>
-                    <label>37662</label>
-                </control>
-                <include>Kodi_Logo</include>
-                <!-- Lines -->
-                <control type="image">
-                    <top>70</top>
-                    <left>17</left>
-                    <width>388</width>
-                    <height>1</height>
-                    <bottom>10</bottom>
-                    <colordiffuse>Black12</colordiffuse>
-                    <texture>common/white.png</texture>
-                </control>
-            </control>
+				<left>25</left>
+				<top>10</top>
+				<control type="label">
+					<description>Header Label</description>
+					<left>70</left>
+					<width>1000</width>
+					<posy>0</posy>
+					<include>FontTop</include>
+					<textcolor>Dark2</textcolor>
+					<label>37662</label>
+				</control>				
+				<include>Kodi_Logo</include>				
+				<!-- Lines -->
+				<control type="image">
+					<top>70</top>
+					<left>17</left>
+					<width>388</width>
+					<height>1</height>
+					<bottom>10</bottom>
+					<colordiffuse>Black12</colordiffuse>
+					<texture>common/white.png</texture>
+				</control>
+			</control>            
             <control type="list" id="3110">
                 <top>100</top>
                 <height min="100" max="570">auto</height>
@@ -163,10 +163,10 @@
                         <height>100%</height>
                         <texture colordiffuse="$VAR[ColorSelectOtherBar]">common/white.png</texture>
                     </control>
-                    <control type="image">
+                    <control type="image">                                
                         <width>100%</width>
                         <height>100%</height>
-                        <texture border="8" colordiffuse="$VAR[ColorHighlightOtherBar]">common/gradient-box-wide.png</texture>
+                        <texture border="8" colordiffuse="$VAR[ColorHighlightOtherBar]">common/gradient-box-wide.png</texture>                   
                     </control>
                     <control type="label">
                         <align>left</align>
@@ -187,7 +187,8 @@
                     </item>-->
                     <include>skinshortcuts-group-powermenu</include>
                 </content>
-            </control>
+            </control> 
+            
             <!--<control type="grouplist" id="3110">
                 <description>grouplist for context buttons</description>
                 <posx>8</posx>
@@ -284,9 +285,9 @@
                     <description>Reboot button</description>
                     <include>DefContextButton</include>
                     <label>37703</label>
-                    <onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
-                    <onclick>Reset()</onclick>
-                    <visible>System.CanReboot</visible>
+					<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
+					<onclick>Reset()</onclick>
+					<visible>System.CanReboot</visible>
                     <align>left</align>
                 </control>
                 
@@ -294,7 +295,7 @@
                     <description>Leia Mod Skin Settings</description>
                     <include>DefContextButton</include>
                     <label>$LOCALIZE[37663]</label>
-                    <onclick>ActivateWindowAndFocus(skinsettings,9108,2)</onclick>
+					<onclick>ActivateWindowAndFocus(skinsettings,9108,2)</onclick>
                     <align>left</align>
                     <visible>System.Loggedon</visible>
                 </control>
@@ -330,6 +331,7 @@
                 </control>
                 
             </control>-->
+
         </control>
     </controls>
 </window>
