@@ -945,15 +945,6 @@
                 <align>left</align>
                 <label fallback="No Focus">$INFO[System.CurrentControlID,Current Focus: ]</label>
             </control>
-            
-            <control type="label">
-                <textcolor>FFFFFFFF</textcolor>            
-                <font>Tiny</font>
-                <align>left</align>
-                <label fallback="ListItem.DBID">$INFO[ListItem.DBID]</label>
-            </control>
-            
-
     
             <!--<control type="label">
                 <textcolor>FFFFFFFF</textcolor>

@@ -12,7 +12,7 @@
     <include file="Includes_DialogAddonInfo.xml" />
     <include file="Includes_DialogPVRInfo.xml" />
     <include file="Includes_MovieSets.xml" />
-    <include file="Includes_SubItems_Home.xml" />
+    <include file="Includes_Weather_Home.xml" />
     
     <!-- Views -->
     <include file="View_50_List.xml" />
@@ -66,12 +66,6 @@
     <expression name="HomeIsClassic">!Skin.HasSetting(home.vertical) + Skin.HasSetting(home.classicwidgets)</expression>
     <expression name="HomeIsVertical">Skin.HasSetting(home.vertical) + !Skin.HasSetting(home.vertical.widgets)</expression>
     <expression name="IsYoutube">String.Contains(Container.FolderPath,plugin://plugin.video.youtube)</expression>
-    
-    <expression name="Widget1Enabled">String.Contains(Container(300).ListItem.Property(widgetEnable),yes)</expression>
-    <expression name="Widget2Enabled">String.Contains(Container(300).ListItem.Property(widgetEnable.2),yes)</expression>
-    <expression name="Widget3Enabled">String.Contains(Container(300).ListItem.Property(widgetEnable.3),yes)</expression>
-    <expression name="Widget4Enabled">String.Contains(Container(300).ListItem.Property(widgetEnable.4),yes)</expression>
-    <expression name="Widget5Enabled">String.Contains(Container(300).ListItem.Property(widgetEnable.5),yes)</expression>
 
 	<include name="FontTop">
 		<font>Medium</font>
@@ -4337,7 +4331,7 @@
         <control type="button" id="9101" description="Alt chooser">
             <width>100%</width>
             <height>66</height>
-            <label>$LOCALIZE[37888]$VAR[LabelWidget1]</label>
+            <label>Widget 1</label>
             <label2>$VAR[LabelWidgetShortcutsName]</label2>
             <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
             <align>left</align>
@@ -4350,7 +4344,7 @@
         <control type="button" id="9102" description="Custom">
             <width>100%</width>
             <height>66</height>
-            <label>$LOCALIZE[37889]$VAR[LabelWidget2]</label>
+            <label>Widget 2</label>
             <label2>$VAR[LabelWidgetShortcutsName2]</label2>
             <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
             <align>left</align>
@@ -4365,7 +4359,7 @@
         <control type="button" id="9103" description="Custom">
             <width>100%</width>
             <height>66</height>
-            <label>$LOCALIZE[37890]$VAR[LabelWidget3]</label>
+            <label>Widget 3</label>
             <label2>$VAR[LabelWidgetShortcutsName3]</label2>
             <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
             <align>left</align>
@@ -4380,7 +4374,7 @@
         <control type="button" id="9104" description="Custom">
             <width>100%</width>
             <height>66</height>
-            <label>$LOCALIZE[37891]$VAR[LabelWidget4]</label>
+            <label>Widget 4</label>
             <label2>$VAR[LabelWidgetShortcutsName4]</label2>
             <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
             <align>left</align>
@@ -4395,7 +4389,7 @@
         <control type="button" id="9105" description="Custom">
             <width>100%</width>
             <height>66</height>
-            <label>$LOCALIZE[37892]$VAR[LabelWidget5]</label>
+            <label>Widget 5</label>
             <label2>$VAR[LabelWidgetShortcutsName5]</label2>
             <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
             <align>left</align>
@@ -4526,17 +4520,4 @@
         <value condition="!String.IsEmpty(Window(Weather).Property(Current.UVIndex))">$INFO[Window(Weather).Property(Current.UVIndex)]</value>
         <value condition="!String.IsEmpty(Window(Weather).Property(Current.Cloudiness))">$INFO[Window(Weather).Property(Current.Cloudiness),$LOCALIZE[31068] ,]</value>
     </variable>
-    
-    <variable name="SetSkinHelperWidgetContainer">
-        <value condition="Control.IsVisible(30111)">AlarmClock(PreloadTimeout,SetProperty(SkinHelper.WidgetContainer,30111),00:01,silent)</value>
-        <value condition="Control.IsVisible(30121)">AlarmClock(PreloadTimeout,SetProperty(SkinHelper.WidgetContainer,30121),00:01,silent)</value>
-        <value condition="Control.IsVisible(30131)">AlarmClock(PreloadTimeout,SetProperty(SkinHelper.WidgetContainer,30131),00:01,silent)</value>
-        <value condition="Control.IsVisible(30141)">AlarmClock(PreloadTimeout,SetProperty(SkinHelper.WidgetContainer,30141),00:01,silent)</value>
-        <value condition="Control.IsVisible(30151)">AlarmClock(PreloadTimeout,SetProperty(SkinHelper.WidgetContainer,30151),00:01,silent)</value>
-        <value condition="Control.IsVisible(30161)">AlarmClock(PreloadTimeout,SetProperty(SkinHelper.WidgetContainer,30161),00:01,silent)</value>
-        <value condition="Control.IsVisible(30171)">AlarmClock(PreloadTimeout,SetProperty(SkinHelper.WidgetContainer,30171),00:01,silent)</value>
-        <value condition="Control.IsVisible(30181)">AlarmClock(PreloadTimeout,SetProperty(SkinHelper.WidgetContainer,30181),00:01,silent)</value>
-        <value condition="Control.IsVisible(30191)">AlarmClock(PreloadTimeout,SetProperty(SkinHelper.WidgetContainer,30191),00:01,silent)</value>
-    </variable>
 </includes>
-

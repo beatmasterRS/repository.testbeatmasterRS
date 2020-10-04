@@ -435,9 +435,9 @@
                             <width>1310</width>
                             <visible>ControlGroup(9100).HasFocus(9101)</visible>
                             <include>DefSettingsButtonGradient</include>
-                            <label>weather.widget.old</label>                   
-                            <selected>Skin.HasSetting(weather.widget.old)</selected>
-                            <onclick>Skin.ToggleSetting(weather.widget.old)</onclick>
+                            <label>weather.widget.extended</label>                   
+                            <selected>Skin.HasSetting(weather.widget.extended)</selected>
+                            <onclick>Skin.ToggleSetting(weather.widget.extended)</onclick>
                         </control>
                         <control type="button" id="9855">
                             <width>1310</width>
